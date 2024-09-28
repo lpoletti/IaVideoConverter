@@ -1,20 +1,12 @@
-// script.js
-// Aqui você adicionará o JavaScript para interações e funcionalidades
-const searchForm = document.getElementById('searchForm');
-const searchResults = document.getElementById('searchResults');
-const data = [
-  { title: 'Post 1', content: 'Conteúdo do post 1' },
-  { title: 'Post 2', content: 'Conteúdo do post 2' },
-  // ... outros dados
-];
+// Função para colapsar a barra lateral no clique do botão
+document.querySelector('.sidebar-toggle').addEventListener('click', function() {
+    const sidebar = document.getElementById('sidebar');
+    sidebar.classList.toggle('collapse');
+});
 
-searchForm.addEventListener('submit', (event) => {
-  event.preventDefault();
-  const searchTerm = document.getElementById('searchInput').value.toLowerCase();
-
-  const results = data.filter(item => {
-    return item.title.toLowerCase().includes(searchTerm) || item.content.toLowerCase().includes(searchTerm);
-  });
-
-  searchResults.innerHTML = results.map(item => `<p>${item.title}</p>`).join('');
+// Simulação de login/logout funcional com Django
+document.getElementById('loginForm').addEventListener('submit', function(event) {
+    {% comment %} event.preventDefault(); {% endcomment %}
+    // Aqui você pode adicionar a chamada Ajax para Django
+    alert('Login realizado com sucesso!');
 });

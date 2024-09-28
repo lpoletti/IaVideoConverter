@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Seu Site - Login</title> <link rel="stylesheet" href="style.css"> </head>
+<body>
+    <div class="container d-flex justify-content-center align-items-center">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <h1>Login</h1>
+                <form class="form-signin" method="post" action="processar_login.php">
+                    <input placeholder="Usuário" type="username" id="username" name="username" required>
+                    <input placeholder="Email" type="email" id="email" name="email" required>
+                    <br>
+                    <input placeholder="Senha" type="password" id="senha" name="senha" required>
+                    <br>
+                    <input placeholder="Repita a senha" type="password2" id="senha2" name="Repita a senha" required>
+                    <button type="submit">Entrar</button>
+                </form>   
+
+                <a href="#">Não tem cadastro? Cadastre-se!</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
